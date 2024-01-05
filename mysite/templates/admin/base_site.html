@@ -1,0 +1,7 @@
+{% extends "admin/base.html" %} {% block branding %}
+<h1 id="site-name">
+	<a href="{% url 'admin:index' %}">Django Learning Admin Portal</a>
+</h1>
+{% if user.is_anonymous %} {% include "admin/color_theme_toggle.html" %}
+<!-- maintain valid tag -->
+{% endif %} {% endblock %}
